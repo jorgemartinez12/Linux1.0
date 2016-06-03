@@ -1,0 +1,67 @@
+    1  cd ..
+    2  apt-get install git
+    3  apt-get install tree
+    4  apt-get install lvm2
+    5  apt-get install vim
+    6  vim tutor
+    7  apt-get install vimtutor
+    8  vimtutor
+    9  apt-get install lvm2
+   10  fdisk -l
+   11  pvcreate /dev/sda{6,7,8,9,10,11,12,13}
+   12  man vgcrete
+   13  man vgcreate
+   14  vgcreate -s 16M vg01 /dev/sda6
+   15  vgdisplay
+   16  vgdisplay -v
+   17  man vgextend
+   18  vgextend /dev/sda7
+   19  man vgcreate
+   20  man vgextend
+   21  vgextend vg01 /dev/sda7
+   22  vgdisplay 
+   23  vgcreate -s 16M vg02 /dev/sda8
+   24  vgcreate -s 16M vg03 /dev/sda10
+   25  vgcreate -s 16M vg04 /dev/sda12
+   26  vgdisplay
+   27  vgextend vg02 /dev/sda9
+   28  vgextend vg03 /dev/sda11
+   29  vgextend vg04 /dev/sda13
+   30  man lvcreate
+   31  lvcreate -L 500M -n data01 /dev/vg01
+   32  lvdisplay -v
+   33  lvcreate -L 1G -n data02 /dev/vg02
+   34  lvcreate -L 500M -n data03 /dev/vg03
+   35  lvdisplay -v
+   36  vim /etc/fstab
+   37  lvcreate -L 4G -n data04 /dev/vg04
+   38  lvcreate -L 1G -n data04 /dev/vg04
+   39  lvdisplay
+   40  mkdir data{01,02,03,04}
+   41  mount /dev/vg01/data01 data01
+   42  mkfs -t ext4 /dev/vg01/data01
+   43  mount -t ext4 /dev/vg02/data02 data02
+   44  mount -t ext4 /dev/vg02/data02
+   45  mkfs -t ext4 /dev/vg02/data02
+   46  mkfs -t ext4 /dev/vg03/data03
+   47  mkfs -t ext4 /dev/vg04/data04
+   48  mount /dev/vg01/data01 data01/
+   49  mount /dev/vg02/data02 data02
+   50  mount /dev/vg03/data03 data03
+   51  mount /dev/vg04/data04 data04
+   52  tree
+   53  history >LVM
+   54  ls /s
+   55  ls -l
+   56  mkdir gitinfo
+   57  ls-;
+   58  ls -l
+   59  mv LVM /gitinfo
+   60  ls -l
+   61  cd gitinfo/
+   62  ls -
+   63  ls -l
+   64  ls
+   65  ls -a
+   66  cat
+   67  history >lvm
